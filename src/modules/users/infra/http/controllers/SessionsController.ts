@@ -2,14 +2,7 @@ import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 
 import AuthenticateUserService from '@modules/users/services/AuthenticateUserService';
-
-interface IAuthenticateUser {
-  user: {
-    email: string;
-    password?: string;
-  };
-  token: string;
-}
+import UserMap from '@modules/users/infra/http/mappers/UserMap';
 
 export default class SessionsController {
   public async create(request: Request, response: Response): Promise<Response> {
@@ -17,10 +10,10 @@ export default class SessionsController {
 
     const authenticateUser = container.resolve(AuthenticateUserService);
 
-    const { user, token }: IAuthenticateUser = await authenticateUser.execute({ email, password });
+    const { user, token } = await authenticateUser.execute({ email, password });
 
-    delete user.password;
+    const mapperUser = UserMap.toDTO(user);
 
-    return response.json({ user, token });
+    return response.json({ mapperUser, token });
   }
 }

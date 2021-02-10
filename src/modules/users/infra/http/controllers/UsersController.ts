@@ -2,12 +2,7 @@ import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 
 import CreateUserService from '@modules/users/services/CreateUserService';
-
-interface IUser {
-  name: string;
-  email: string;
-  password?: string;
-}
+import UserMap from '@modules/users/infra/http/mappers/UserMap';
 
 export default class UsersController {
   public async create(request: Request, response: Response): Promise<Response> {
@@ -15,10 +10,10 @@ export default class UsersController {
 
     const createUser = container.resolve(CreateUserService);
 
-    const user: IUser = await createUser.execute({ name, email, password });
+    const user = await createUser.execute({ name, email, password });
 
-    delete user.password;
+    const mapperUser = UserMap.toDTO(user);
 
-    return response.json(user);
+    return response.json(mapperUser);
   }
 }

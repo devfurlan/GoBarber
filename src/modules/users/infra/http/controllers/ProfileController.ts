@@ -3,6 +3,7 @@ import { container } from 'tsyringe';
 
 import UpdateProfileService from '@modules/users/services/UpdateProfileService';
 import ShowProfileService from '@modules/users/services/ShowProfileService';
+import UserMap from '@modules/users/infra/http/mappers/UserMap';
 
 export default class ProfileController {
   public async show(request: Request, response: Response): Promise<Response> {
@@ -12,10 +13,9 @@ export default class ProfileController {
 
     const user = await showProfile.execute({ user_id });
 
-    // @ts-ignore
-    delete user.password;
+    const mapperUser = UserMap.toDTO(user);
 
-    return response.json(user);
+    return response.json(mapperUser);
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
@@ -32,9 +32,8 @@ export default class ProfileController {
       password,
     });
 
-    // @ts-ignore
-    delete user.password;
+    const mapperUser = UserMap.toDTO(user);
 
-    return response.json(user);
+    return response.json(mapperUser);
   }
 }
