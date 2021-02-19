@@ -19,7 +19,7 @@ interface IAuthContext {
   signOut(): void;
 }
 
-const AuthContext = createContext<IAuthContext>({} as IAuthContext);
+const Auth = createContext<IAuthContext>({} as IAuthContext);
 
 const AuthProvider: React.FC = ({ children }) => {
   const [data, setData] = useState<IAuthState>(() => {
@@ -55,14 +55,14 @@ const AuthProvider: React.FC = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user: data.user, signIn, signOut }}>
+    <Auth.Provider value={{ user: data.user, signIn, signOut }}>
       {children}
-    </AuthContext.Provider>
+    </Auth.Provider>
   );
 };
 
 function useAuth(): IAuthContext {
-  const context = useContext(AuthContext);
+  const context = useContext(Auth);
 
   if (!context) {
     throw new Error('useAuth must be used whitin an AuthProvider');

@@ -1,7 +1,8 @@
 import React, { useCallback, useRef } from 'react';
 import { FiLock, FiLogIn, FiMail } from 'react-icons/fi';
 import { Form } from '@unform/web';
-import { useAuth } from '../../hooks/AuthContext';
+import { useAuth } from '../../hooks/auth';
+import { useToast } from '../../hooks/toast';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
@@ -21,6 +22,7 @@ const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
   const { signIn } = useAuth();
+  const { addToast } = useToast();
 
   const handleSubmit = useCallback(async (data: ISignInFormData) => {
     try {
@@ -33,7 +35,7 @@ const SignIn: React.FC = () => {
 
       await schema.validate(data, { abortEarly: false });
 
-      signIn({
+      await signIn({
         email: data.email,
         password: data.password,
       });
@@ -43,8 +45,14 @@ const SignIn: React.FC = () => {
 
         formRef.current?.setErrors(errors);
       }
+
+      addToast({
+        type: 'danger',
+        title: 'Erro na autenticação',
+        description: 'Ocorreu um erro ao fazer o login, verifique suas credenciais.',
+      });
     }
-  }, []);
+  }, [signIn, addToast]);
 
   return (
     <Container>
