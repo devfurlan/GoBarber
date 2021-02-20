@@ -14,6 +14,6 @@ export default class SessionsController {
 
     const mapperUser = UserMap.toDTO(user);
 
-    return response.json({ mapperUser, token });
+    return response.json({ user: mapperUser, token });
   }
 }

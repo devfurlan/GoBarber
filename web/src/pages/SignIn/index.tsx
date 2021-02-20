@@ -1,17 +1,18 @@
 import React, { useCallback, useRef } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { FiLock, FiLogIn, FiMail } from 'react-icons/fi';
+import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
+import * as Yup from 'yup';
 import { useAuth } from '../../hooks/auth';
 import { useToast } from '../../hooks/toast';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
+import getValidationErrors from '../../utils/getValidationErrors';
 
 import logoImg from '../../assets/logo.svg';
 
-import { Container, Content, Background } from './styles';
-import { FormHandles } from '@unform/core';
-import * as Yup from 'yup';
-import getValidationErrors from '../../utils/getValidationErrors';
+import { Container, Content, AnimationContainer, Background } from './styles';
 
 interface ISignInFormData {
   email: string;
@@ -20,6 +21,7 @@ interface ISignInFormData {
 
 const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
+  const history = useHistory();
 
   const { signIn } = useAuth();
   const { addToast } = useToast();
@@ -39,11 +41,15 @@ const SignIn: React.FC = () => {
         email: data.email,
         password: data.password,
       });
+
+      history.push('/dashboard');
     } catch (e) {
       if (e instanceof Yup.ValidationError) {
         const errors = getValidationErrors(e);
 
         formRef.current?.setErrors(errors);
+
+        return;
       }
 
       addToast({
@@ -52,29 +58,31 @@ const SignIn: React.FC = () => {
         description: 'Ocorreu um erro ao fazer o login, verifique suas credenciais.',
       });
     }
-  }, [signIn, addToast]);
+  }, [signIn, history, addToast]);
 
   return (
     <Container>
-      <Content>
-        <img src={logoImg} alt=""/>
+      <AnimationContainer>
+        <Content>
+          <img src={logoImg} alt=""/>
 
-        <Form ref={formRef} onSubmit={handleSubmit}>
-          <h1>Faça seu login</h1>
+          <Form ref={formRef} onSubmit={handleSubmit}>
+            <h1>Faça seu login</h1>
 
-          <Input name="email" icon={FiMail} type="email" placeholder="E-mail"/>
-          <Input name="password" icon={FiLock} type="password" placeholder="Senha"/>
+            <Input name="email" icon={FiMail} type="email" placeholder="E-mail"/>
+            <Input name="password" icon={FiLock} type="password" placeholder="Senha"/>
 
-          <Button type="submit">Entrar</Button>
+            <Button type="submit">Entrar</Button>
 
-          <a href="forgot">Esqueci minha senha</a>
-        </Form>
+            <a href="forgot">Esqueci minha senha</a>
+          </Form>
 
-        <a href="#">
-          <FiLogIn/>
-          Criar conta
-        </a>
-      </Content>
+          <Link to="/signup" className="link_sign">
+            <FiLogIn/>
+            Criar conta
+          </Link>
+        </Content>
+      </AnimationContainer>
 
       <Background/>
     </Container>
