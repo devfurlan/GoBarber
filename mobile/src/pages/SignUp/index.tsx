@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/mobile';
 import * as Yup from 'yup';
+import api from '../../services/api';
 import getValidationErrors from '../../utils/getValidationErrors';
 
 import logoImg from '../../assets/logo.png';
@@ -44,15 +45,14 @@ const SignUp: React.FC = () => {
 
       await schema.validate(data, { abortEarly: false });
 
-      // await api.post('/users', data);
+      await api.post('/users', data);
 
-      // history.push('/');
+      navigation.navigate('SignIn');
 
-      // addToast({
-      //   type: 'success',
-      //   title: 'Cadastro realizado!',
-      //   description: 'Você já pode acessar o GoBarber',
-      // });
+      Alert.alert(
+        'Cadastro realizado!',
+        'Você já pode acessar o GoBarber.',
+      )
     } catch (e) {
       if (e instanceof Yup.ValidationError) {
         const errors = getValidationErrors(e);
@@ -68,7 +68,6 @@ const SignUp: React.FC = () => {
       )
     }
   }, []);
-
 
   return (
     <>
