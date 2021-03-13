@@ -9,11 +9,16 @@
       <change afterPath="$PROJECT_DIR$/src/hooks/index.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/hooks/toast.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/pages/Dashboard/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ForgotPassword/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ForgotPassword/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ResetPassword/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ResetPassword/styles.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/routes/Route.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/AuthContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/auth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/SignIn/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignIn/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/SignIn/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignIn/styles.ts" afterDir="false" />
@@ -52,7 +57,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,9 +72,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/components/ToastContainer/Toast" />
       <recent name="$PROJECT_DIR$/src/components/Tooltip" />
-      <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
@@ -88,6 +93,8 @@
       <workItem from="1613776032011" duration="599000" />
       <workItem from="1613827647329" duration="5246000" />
       <workItem from="1613837390992" duration="95000" />
+      <workItem from="1615602103833" duration="2144000" />
+      <workItem from="1615648216225" duration="2375000" />
     </task>
     <servers />
   </component>
