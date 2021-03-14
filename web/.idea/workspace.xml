@@ -2,29 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af9970c1-f0ed-4dc1-bd8f-d84a0954e2a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ToastContainer/Toast/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ToastContainer/Toast/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ToastContainer/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ToastContainer/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/toast.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Dashboard/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ForgotPassword/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ForgotPassword/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ResetPassword/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ResetPassword/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/Route.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/ArrowLeftIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/ArrowRightIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Dashboard/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Profile/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Profile/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/modules/appointments/services/CreateAppointmentService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/modules/appointments/services/CreateAppointmentService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/modules/appointments/services/ListProviderAppointmentsService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/modules/appointments/services/ListProviderAppointmentsService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/modules/users/services/CreateUserService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/modules/users/services/CreateUserService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/shared/infra/http/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/shared/infra/http/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/AuthContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/auth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SignIn/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignIn/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SignIn/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignIn/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SignUp/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignUp/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/SignUp/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/SignUp/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/global.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Input/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToastContainer/Toast/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToastContainer/Toast/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToastContainer/Toast/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToastContainer/Toast/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/auth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ResetPassword/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ResetPassword/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +30,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -59,13 +56,16 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.23064385" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -73,9 +73,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src/components/ToastContainer/Toast" />
       <recent name="$PROJECT_DIR$/src/components/Tooltip" />
-      <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
   </component>
@@ -94,7 +94,9 @@
       <workItem from="1613827647329" duration="5246000" />
       <workItem from="1613837390992" duration="95000" />
       <workItem from="1615602103833" duration="2144000" />
-      <workItem from="1615648216225" duration="2375000" />
+      <workItem from="1615648216225" duration="20221000" />
+      <workItem from="1615729347268" duration="3660000" />
+      <workItem from="1615734798551" duration="2266000" />
     </task>
     <servers />
   </component>
@@ -112,6 +114,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

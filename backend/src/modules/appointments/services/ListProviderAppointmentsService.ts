@@ -38,6 +38,6 @@ export default class ListProviderAppointmentsService {
 
     await this.cacheProvider.save(cacheKey, classToClass(appointments));
 
-    return appointments;
+    return classToClass(appointments);
   }
 }

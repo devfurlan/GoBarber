@@ -1,10 +1,9 @@
 import React, { useCallback, useRef } from 'react';
-import { Link, useHistory, useLocation } from 'react-router-dom';
-import { FiLock, FiLogIn, FiMail } from 'react-icons/fi';
+import { useHistory, useLocation } from 'react-router-dom';
+import { FiLock } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
-import { useAuth } from '../../hooks/auth';
 import { useToast } from '../../hooks/toast';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
@@ -25,7 +24,6 @@ const ResetPassword: React.FC = () => {
   const history = useHistory();
   const location = useLocation();
 
-  const { signIn } = useAuth();
   const { addToast } = useToast();
 
   const handleSubmit = useCallback(async (data: IResetPasswordFormData) => {
@@ -34,7 +32,7 @@ const ResetPassword: React.FC = () => {
 
       const schema = Yup.object().shape({
         password: Yup.string().min(6, 'No mínimo 6 caracteres'),
-        password_confirmation: Yup.string().oneOf([Yup.ref('password'), null], 'Confirmação incorreta'),
+        password_confirmation: Yup.string().min(6, 'No mínimo 6 caracteres').oneOf([Yup.ref('password'), null], 'Confirmação incorreta'),
       });
 
       await schema.validate(data, { abortEarly: false });
@@ -52,13 +50,17 @@ const ResetPassword: React.FC = () => {
         token,
       });
 
+      addToast({
+        type: 'success',
+        title: 'Senha alterada com sucesso',
+        description: 'Faça o login, com sua nova senha, para acessar sua conta.',
+      });
+
       history.push('/');
     } catch (e) {
       if (e instanceof Yup.ValidationError) {
         const errors = getValidationErrors(e);
-
         formRef.current?.setErrors(errors);
-
         return;
       }
 
@@ -68,7 +70,7 @@ const ResetPassword: React.FC = () => {
         description: 'Ocorreu um erro ao resetar sua senha, tente novamente.',
       });
     }
-  }, [history, addToast, location]);
+  }, [addToast, history, location]);
 
   return (
     <Container>

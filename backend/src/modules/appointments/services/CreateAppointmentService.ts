@@ -62,6 +62,8 @@ class CreateAppointmentService {
         'yyyy-M-d')}`,
     );
 
+    await this.cacheProvider.invalidatePrefix('provider-appointments');
+
     return appointment;
   }
 }
