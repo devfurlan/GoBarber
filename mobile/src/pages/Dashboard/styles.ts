@@ -9,8 +9,7 @@ export const Container = styled.View`
 `;
 
 export const Header = styled.View`
-  padding: 24px;
-  padding-top: ${getStatusBarHeight() + 24}px;
+  padding: ${getStatusBarHeight() + 24}px 24px 24px;
   background: #28262e;
   flex-direction: row;
   justify-content: space-between;
