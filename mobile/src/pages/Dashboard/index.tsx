@@ -17,6 +17,7 @@ import {
   ProviderMeta,
   ProviderMetaText,
   ProvidersListTitle,
+  LogoutButton,
 } from './styles';
 import { useNavigation } from '@react-navigation/native';
 import api from '../../services/api';
@@ -52,6 +53,10 @@ const Dashboard: React.FC = () => {
   return (
     <Container>
       <Header>
+        <ProfileButton onPress={navigateToProfile}>
+          <UserAvatar source={{ uri: user.avatar_url }}/>
+        </ProfileButton>
+
         <HeaderTitle>
           Bem-vindo,{'\n'}
           <UserName>
@@ -59,9 +64,9 @@ const Dashboard: React.FC = () => {
           </UserName>
         </HeaderTitle>
 
-        <ProfileButton onPress={navigateToProfile}>
-          <UserAvatar source={{ uri: user.avatar_url }}/>
-        </ProfileButton>
+        <LogoutButton onPress={signOut}>
+          <Icon name="log-out" size={24} color="#999591" />
+        </LogoutButton>
       </Header>
 
       <ProvidersList
@@ -76,12 +81,12 @@ const Dashboard: React.FC = () => {
 
               <ProviderMeta>
                 <Icon name="calendar" size={14} color="#ff9000"/>
-                <ProviderMetaText>data</ProviderMetaText>
+                <ProviderMetaText>Segunda à sexta</ProviderMetaText>
               </ProviderMeta>
 
               <ProviderMeta>
                 <Icon name="clock" size={14} color="#ff9000"/>
-                <ProviderMetaText>OitoHoras</ProviderMetaText>
+                <ProviderMetaText>8h às 18h</ProviderMetaText>
               </ProviderMeta>
             </ProviderInfo>
           </ProviderContainer>

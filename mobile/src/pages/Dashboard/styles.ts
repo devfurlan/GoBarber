@@ -12,7 +12,6 @@ export const Header = styled.View`
   padding: ${getStatusBarHeight() + 24}px 24px 24px;
   background: #28262e;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
 `;
 
@@ -21,6 +20,7 @@ export const HeaderTitle = styled.Text`
   font-size: 24px;
   font-family: 'RobotoSlab-Regular';
   line-height: 28px;
+  margin-left: 16px;
 `;
 
 export const UserName = styled.Text`
@@ -28,9 +28,11 @@ export const UserName = styled.Text`
   font-family: 'RobotoSlab-Medium';
 `;
 
-export const ProfileButton = styled.TouchableOpacity`
-  
+export const LogoutButton = styled.TouchableOpacity`
+  margin-left: auto;
 `;
+
+export const ProfileButton = styled.TouchableOpacity``;
 
 export const UserAvatar = styled.Image`
   width: 56px;
