@@ -42,7 +42,6 @@ const Profile: React.FC = () => {
           then: Yup.string().min(6, 'No mínimo 6 caracteres'),
           otherwise: Yup.string(),
         }),
-        // password: Yup.string().min(6, 'No mínimo 6 caracteres'),
         password_confirmation: Yup.string().when('old_password', {
           is: (val: string | any[]) => !!val.length,
           then: Yup.string().min(6, 'No mínimo 6 caracteres'),
