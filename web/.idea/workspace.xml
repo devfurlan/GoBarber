@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af9970c1-f0ed-4dc1-bd8f-d84a0954e2a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/__test__/components/Input.spec.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__test__/hooks/auth.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mobile/src/__tests__/pages/SignIn.spec.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mobile/src/setupTests.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mobile/__tests__/App-test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../mobile/src/__tests__/App-test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mobile/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../mobile/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mobile/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../mobile/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__test__/pages/SignIn.spec.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/__test__/pages/SignIn.spec.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Input/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/auth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/__test__" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mobile" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -92,7 +90,7 @@
       <workItem from="1616107503479" duration="1935000" />
       <workItem from="1616195898585" duration="5293000" />
       <workItem from="1616206096067" duration="3065000" />
-      <workItem from="1616257755777" duration="9077000" />
+      <workItem from="1616257755777" duration="9839000" />
     </task>
     <servers />
   </component>
